@@ -66,8 +66,9 @@ public class FuncionarioService {
 
     public void imprimirMap(Map<String, List<Funcionario>> listMap) {
         listMap.forEach((k, v) -> {
+            System.out.println(k + ": ");
             for (int i = 0; i < v.size(); i++) {
-                System.out.println(k + " = " + v.get(i).getNome() + " - "
+                System.out.println(v.get(i).getNome() + " - "
                         + v.get(i).getDataNascimentoToString() + " - "
                         + formatarValor(v.get(i).getSalario()));
             }
